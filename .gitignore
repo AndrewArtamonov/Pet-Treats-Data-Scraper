@@ -63,5 +63,5 @@ venv
 path/
 
 # custom files
-Scraping Masterlist.xlsx
+*.xlsx
 examples
