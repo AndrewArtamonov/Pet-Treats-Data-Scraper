@@ -42,12 +42,12 @@ class PetLovers:
         self.start_time = time.time()
 
     def process(self):
-
         # url = ""  #
         # self.process_product("", 2, url)
 
-        # self.process_base(product_type="Dry Food", product_class="Dry Food",
-        #                   url=self.dry_food_url, comment="Opening Dry Food main page")
+        # Dry Food
+        self.process_base(product_type="Dry Food", product_class="Dry Food",
+                          url=self.dry_food_url, comment="Opening Dry Food main page")
 
         # Canned / Moist food
         self.process_base(product_type="Canned/Moist", product_class="Food Pouches",
@@ -74,17 +74,6 @@ class PetLovers:
         # Frozen/Raw
         self.process_base(product_type="Frozen/Raw", product_class="Frozen food",
                           url=self.frozen_url, comment="Opening Frozen Food main page")
-
-    def process_dry_food(self):
-        product_class = "Dry Food"
-        product_type = "Dry Food"
-
-        print("*" * 30)
-        print("Opening Dry Food main page")
-        self.browser.get(url=self.dry_food_url)
-        self.browser.maximize_window()
-
-        self.process_pages(product_class, product_type)
 
     def process_base(self, product_type, product_class, url, comment):
         print("*" * 30)
